@@ -1,0 +1,12 @@
+{% extends "demo/base.html" %}
+{% block content %}
+    <p>je suis la mon ami {{request.user.id}}</p>
+    <p>nous somme le {% now 'd/m/Y' %}</p>
+    <p>{% lorem 2 %}</p>
+    <form method="post">
+        {% csrf_token %}
+         {{form.as_p}}
+         <input type="submit" value="Save">
+    </form>
+   
+{% endblock content %}

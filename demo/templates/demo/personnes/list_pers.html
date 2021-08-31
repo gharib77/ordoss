@@ -1,0 +1,9 @@
+{% extends "demo/base.html" %}
+{% block content %}
+{% for rec in records %}
+    <a href="">{{rec.nom}}</a>
+    <a href="">{{rec.prenom}}</a>
+    <a href="">{{rec.get_complete_str}}</a>
+    <br>
+{% endfor %}
+{% endblock content %}
